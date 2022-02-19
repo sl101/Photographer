@@ -1,0 +1,18 @@
+.hero {
+	min-height: 100vh;
+	margin: 75px 0 0 0;
+
+	@include sm {
+		margin: 100px 0 0 0;
+	}
+
+	&__icon {
+		fill: $mainColor;
+		cursor: pointer;
+		transition: all $hoverTime ease;
+
+		&:hover {
+			fill: darkblue;
+		}
+	}
+}
