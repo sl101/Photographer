@@ -1,0 +1,33 @@
+.social-media {
+	flex: 0 0 170px;
+	display: flex;
+	justify-content: space-between;
+
+	// .social-media__link
+	&__link {
+		outline: none;
+
+		@include lg-min {
+			&:focus .social-media__icon {
+				fill: $mainColor-20;
+			}
+
+			&:hover .social-media__icon {
+				fill: $mainColor;
+			}
+
+			&:active .social-media__icon {
+				transform: translate(2px, 2px);
+			}
+		}
+	}
+
+	// .social-media__icon
+	&__icon {
+		width: 30px;
+		height: 30px;
+		fill: $white;
+		cursor: pointer;
+		transition: all $hoverTime ease-in;
+	}
+}
