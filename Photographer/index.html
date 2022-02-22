@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kovalyova</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header fixed">
+	<div class="container">
+		<div class="header__content">
+
+			<a class="header__logo goto hover" data-goto=".hero" href="#" tabindex="1">
+				kovalyova
+			</a>
+
+			<div class="header__menu menu">
+				<button class="menu__burger burger" type="button" tabindex="2">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+
+				<nav class="menu__body fixed">
+					<span class="sr-only">Блок навигации</span>
+
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a class="menu__link hover goto" data-goto=".portfolio" href="#" tabindex="3">Портфолио</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link hover goto" data-goto=".about" href="#" tabindex="4">Обо мне</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link hover goto" data-goto=".gallery" href="#" tabindex="5">Стоимость</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link hover goto" data-goto=".reviews" href="#" tabindex="6">Отзывы</a>
+						</li>
+
+						<li class="menu__item">
+							<a class="menu__link hover goto" data-goto=".contacts" href="#" tabindex="7">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<a class="menu__phone hover dynamic-adaptive" data-da=".menu__body,992,last" href="tel:+380934457885"
+				tabindex="8">
+				+380(93)445-78-85
+			</a>
+		</div>
+	</div>
+</header>
+		<main class="page">
+			<section class="hero" id="hero">
+	<div class="swiper-container">
+		<div class="hero__swiper swiper-hero">
+			<ul class="swiper-hero__wrapper">
+				<li class="swiper-hero__slide hero-slide hero-slide--1"></li>
+
+				<li class="swiper-hero__slide hero-slide hero-slide--2"></li>
+
+				<li class="swiper-hero__slide hero-slide hero-slide--3"></li>
+
+				<li class="swiper-hero__slide hero-slide hero-slide--4"></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container hero__content">
+		<div class="hero__inner">
+			<div class="hero__announcement">
+				<h1 class="sr-only">
+					Kovalyova Mary.
+					Ваш фотограф & видеограф в Одессе
+				</h1>
+				<span class="hero__owner">Kovalyova Mary</span>
+				<span class="hero__title">Ваш фотограф & видеограф в Одессе</span>
+				<button class="hero__button btn btn--white" type="button">
+					Записаться на съемку
+				</button>
+			</div>
+
+			<div class="hero__media">
+				<ul class="social-media__list social-media">
+					<li class="social-media__item">
+						<a class="social-media__link" href="#" target="blank" aria-label="Моя страница в instagram">
+							<svg class="social-media__icon">
+								<use xlink:href="img/sprite.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+
+					<li class="social-media__item">
+						<a class="social-media__link" href="#" target="blank" aria-label="Моя страница на pinterest">
+							<svg class="social-media__icon">
+								<use xlink:href="img/sprite.svg#pinterest"></use>
+							</svg>
+						</a>
+					</li>
+
+					<li class="social-media__item">
+						<a class="social-media__link" href="#" target="blank" aria-label="Моя страница на behance">
+							<svg class="social-media__icon">
+								<use xlink:href="img/sprite.svg#behance"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="swiper-hero__pagination"></div>
+		</div>
+	</div>
+
+</section>
+			<section class="reviews">
+	<div class="reviews__container container">
+		<h2 class="reviews__title title">
+			Отзывы
+		</h2>
+
+		<div class="reviews__content">
+			<div class="swiper-review__arrow swiper-review__arrow--prev"></div>
+			<div class="swiper-review__arrow swiper-review__arrow--next"></div>
+
+			<div class="reviews__slider swiper-review">
+				<ul class="swiper-review__wrapper">
+					<li class="swiper-review__slide slide-review">
+						<div class="slide-review__content">
+							<span class="slide-review__author">
+								Наталья, Одесса
+							</span>
+							<div class="slide-review__text">
+								<p>
+									Спасибо за позитивный заряд энергии, суперское настроение, которое получаешь от фотосьемки!
+									Было очень приятно поработать с настоящим знатоком своего дела!!
+								</p>
+								<p>
+									Еще больших успехов тебе, новых творческих идей и вдохновения!!!!!
+								</p>
+							</div>
+						</div>
+						<img class="slide-review__img" loading="lazy" src="../img/reviews/natalia_odessa.jpg" width="300px"
+							height="300px" alt="customer">
+					</li>
+
+					<li class="swiper-review__slide slide-review">
+						<div class="slide-review__content">
+							<span class="slide-review__author">
+								Наталья, Одесса
+							</span>
+							<div class="slide-review__text">
+								<p>
+									Спасибо за позитивный заряд энергии, суперское настроение, которое получаешь от фотосьемки!
+									Было очень приятно поработать с настоящим знатоком своего дела!!
+								</p>
+								<p>
+									Еще больших успехов тебе, новых творческих идей и вдохновения!!!!!
+								</p>
+							</div>
+						</div>
+						<img class="slide-review__img" loading="lazy" src="../img/reviews/natalia_odessa.jpg" width="300px"
+							height="300px" alt="customer">
+					</li>
+
+					<li class="swiper-review__slide slide-review">
+						<div class="slide-review__content">
+							<span class="slide-review__author">
+								Наталья, Одесса
+							</span>
+							<div class="slide-review__text">
+								<p>
+									Спасибо за позитивный заряд энергии, суперское настроение, которое получаешь от фотосьемки!
+									Было очень приятно поработать с настоящим знатоком своего дела!!
+								</p>
+								<p>
+									Еще больших успехов тебе, новых творческих идей и вдохновения!!!!!
+								</p>
+							</div>
+						</div>
+						<img class="slide-review__img" loading="lazy" src="../img/reviews/natalia_odessa.jpg" width="300px"
+							height="300px" alt="customer">
+					</li>
+				</ul>
+
+				<div class="swiper-review__pagination"></div>
+			</div>
+		</div>
+	</div>
+</section>
+		</main>
+		<footer class="footer" id="footer">
+	<div class="container">
+		<div class="footer__container">
+			<h2 class="footer__title">
+				Footer
+			</h2>
+		</div>
+	</div>
+</footer>
+	</div>
+
+	
+
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>
