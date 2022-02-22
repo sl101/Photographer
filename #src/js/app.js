@@ -1,4 +1,4 @@
-console.log("Hello Gulp!");
+console.log("JS start!");
 
 import * as flsFunctions from "./modules/functions.js";
 flsFunctions.isWebp();

@@ -1,13 +1,9 @@
-// import { use } from 'browser-sync';
-
-import Swiper, { Navigation, Pagination } from 'swiper';
-
-Swiper.use([Navigation, Pagination]);
+import Swiper, { Navigation, Pagination, EffectFade, Autoplay } from 'swiper';
 
 // ========================================================
 const swiperHero = new Swiper('.swiper-hero',{
 
-	// modules: 'swiper/scss/effect-fade',
+	modules: [Navigation, Pagination, EffectFade, Autoplay],
 
 	wrapperClass: 'swiper-hero__wrapper',
 	slideClass: 'swiper-hero__slide',
@@ -18,18 +14,24 @@ const swiperHero = new Swiper('.swiper-hero',{
 		type: 'bullets',
 	},
 
-	// effect: "fade",
-	// fadeEffect: {
-	// 	crossFade: true,
-	// },
-	// autoplay: {
-	// 	delay: 2000,
-	// },
+	speed: 1200,
+	loop: true,
+
+	effect: "fade",
+	fadeEffect: {
+		crossFade: true
+	},
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
 	});
 
 	// ====================================================
 
 	const swiperReview = new Swiper('.swiper-review',{
+
+		modules: [Navigation, Pagination],
 
 		wrapperClass: 'swiper-review__wrapper',
 		slideClass: 'swiper-review__slide',
@@ -45,6 +47,5 @@ const swiperHero = new Swiper('.swiper-hero',{
 			type: 'bullets',
 		},
 	
-		spaceBetween: 70,
-	
+		spaceBetween: 70,	
 		});
