@@ -170,10 +170,12 @@
 		z-index: 20;
 		right: 15px;
 		bottom: -15px;
-		width: 90px;
-		height: 11px;
+		max-width: 90px;
+		width: 100%;
+		min-height: 11px;
 		display: flex;
 		justify-content: space-between;
+		background-color: transparent;
 	}
 }
 

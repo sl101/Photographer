@@ -1,53 +1,88 @@
 .reviews {
-	// .reviews__container
-
-	&__container {
-	}
+	padding: 60px 0;
 
 	// .reviews__title
-
 	&__title {
+		margin: 0 0 40px 0;
 	}
 
 	// .reviews__content
-
 	&__content {
+		position: relative;
+		padding: 0 108px;
 	}
 }
 
 .swiper-review {
 	position: relative;
 	overflow: hidden;
+	height: 443px;
+	height: 514px;
 
 	// .swiper-review__arrow
-
 	&__arrow {
+		position: absolute;
+		top: 34%;
+		width: 70px;
+		height: 70px;
+		outline: none;
+		background-color: transparent;
+		border: 1px solid transparent;
+		border-radius: 100%;
+		cursor: pointer;
+		transition: fill $doubleHoverTime ease-in, border-color $doubleHoverTime ease-in;
+
+		@include lg-min {
+			&--prev:active {
+				transform: translateX(-2px);
+			}
+			&--next:active {
+				transform: translateX(2px);
+			}
+
+			&:focus {
+				border-color: $mainColor-50;
+				.swiper-review__icon {
+					fill: $mainColor-50;
+				}
+			}
+
+			&:hover {
+				border-color: $mainColor;
+				.swiper-review__icon {
+					fill: $mainColor;
+				}
+			}
+		}
 	}
 
 	// .swiper-review__arrow--prev
-
 	&__arrow--prev {
+		left: 0;
 	}
 
 	// .swiper-review__arrow--next
-
 	&__arrow--next {
+		right: 0;
+	}
+
+	// .swiper-review__icon
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 50px;
+		fill: $mainColor;
+		transition: all $doubleHoverTime ease-in;
 	}
 
 	// .swiper-review__wrapper
-
 	&__wrapper {
 		display: flex;
 	}
 
-	// .swiper-review__slide
-
-	&__slide {
-		flex: 0 0 100%;
-	}
-
 	// .swiper-review__pagination
-
 	&__pagination {
 		position: absolute;
 		bottom: 0;
@@ -55,31 +90,64 @@
 		transform: translateX(-50%);
 		max-width: 190px;
 		width: 100%;
-		background-color: red;
+		display: flex;
+		justify-content: space-between;
+		background-color: transparent;
 		min-height: 11px;
+	}
+
+	.swiper-pagination-bullet {
+		position: relative;
+		z-index: 22;
+		width: 11px;
+		height: 11px;
+		border: 1px solid $mainColor;
+		border-radius: 100%;
+		cursor: pointer;
+		transition: all $hoverTime ease;
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: $mainColor-50;
+	}
+
+	.swiper-pagination-bullet:hover,
+	.swiper-pagination-bullet-active:hover {
+		background-color: $mainColor;
 	}
 }
 
 .slide-review {
+	flex: 0 0 100%;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	height: 443px;
+	overflow: hidden;
 
 	// .slide-review__content
 	&__content {
+		max-width: 470px;
 	}
 
 	// .slide-review__author
-
 	&__author {
+		display: block;
+		margin: 0 0 40px 0;
+		color: $mainColor-40;
 	}
 
-	// .slide-review__text
-
-	&__text {
+	// .slide-review__picture
+	&__picture {
+		flex: 0 0 100%;
+		max-width: 522px;
+		height: 100%;
+		display: flex;
+		justify-content: flex-end;
 	}
 
 	// .slide-review__img
-
 	&__img {
+		object-fit: cover;
 	}
 }

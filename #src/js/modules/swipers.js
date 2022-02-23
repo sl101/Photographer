@@ -47,5 +47,7 @@ const swiperHero = new Swiper('.swiper-hero',{
 			type: 'bullets',
 		},
 	
-		spaceBetween: 70,	
+		spaceBetween: 70,
+		speed: 1200,
+		loop: true,
 		});
