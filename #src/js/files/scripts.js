@@ -25,4 +25,3 @@ if (menuLinks.length > 0) {
 	}
 }
 
-// reviewsAdaptive ===================================

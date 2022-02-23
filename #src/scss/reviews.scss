@@ -111,10 +111,15 @@
 		transform: translateX(-50%);
 		max-width: 190px;
 		width: 100%;
+		min-height: 11px;
 		display: flex;
 		justify-content: space-between;
 		background-color: transparent;
-		min-height: 11px;
+
+		@include sm {
+			max-width: 133px;
+			min-height: 7px;
+		}
 	}
 
 	.swiper-pagination-bullet {
@@ -126,6 +131,11 @@
 		border-radius: 100%;
 		cursor: pointer;
 		transition: all $hoverTime ease;
+
+		@include sm {
+			width: 7px;
+			height: 7px;
+		}
 	}
 
 	.swiper-pagination-bullet-active {
@@ -175,7 +185,15 @@
 		color: $mainColor-40;
 
 		@include xl {
+			display: none;
 			margin: 0 0 30px 0;
+		}
+
+		&--last {
+			display: none;
+			@include xl {
+				display: block;
+			}
 		}
 	}
 
