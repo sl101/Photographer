@@ -1,0 +1,139 @@
+.portfolio {
+	padding: 120px 0 90px;
+
+	@include lg {
+		padding: 100px 0 80px;
+	}
+
+	// .portfolio__title
+	&__title {
+		margin: 0 0 80px 0;
+
+		@include lg {
+			margin: 0 0 50px 0;
+		}
+	}
+
+	// .portfolio__wrapper
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		min-height: 1310px;
+		grid-gap: 30px;
+	}
+
+	// .portfolio__content
+
+	&__content {
+		margin: 0 0 10px 0;
+
+		@include lg {
+			margin: 0 0 40px 0;
+		}
+	}
+
+	// .portfolio__list
+	&__list {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		justify-items: center;
+		grid-gap: 21px;
+
+		@include xl {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	// .portfolio__item
+	&__item {
+		position: relative;
+		max-width: 413px;
+		min-height: 340px;
+		overflow: hidden;
+
+		@include lg-min {
+			&:hover .hover-unit {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	// .portfolio__link
+	&__link {
+		position: relative;
+		z-index: 0;
+		display: inline-block;
+		outline: none;
+
+		@include lg-min {
+			&:focus + .hover-unit {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	// .portfolio__img
+	&__img {
+	}
+
+	// .portfolio__button
+	&__button {
+		align-self: flex-end;
+		display: inline-block;
+		font-family: "Roboto", sans-serif;
+		font-size: 14px;
+		text-align: right;
+
+		&--open {
+			display: inline-block;
+		}
+
+		&--close {
+			display: none;
+		}
+	}
+}
+
+.hover-unit {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: $white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: $mainColor-50;
+	transform: translateY(100%);
+	transition: transform $hoverTime ease-in;
+
+	// .hover-unit__title
+	&__title {
+		font-size: 24px;
+		display: block;
+		margin: 0 0 35px 0;
+	}
+
+	// .hover-unit__button
+	&__button {
+		display: block;
+		cursor: pointer;
+		font-family: "Roboto";
+		border: 1px solid $white;
+		border-radius: 10px;
+		padding: 12px 48px;
+		transition: all $doubleHoverTime ease;
+
+		@include lg-min {
+			&:hover {
+				color: $white;
+				border-color: $mainColor;
+				background-color: $mainColor;
+			}
+		}
+	}
+}
