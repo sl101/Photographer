@@ -33,9 +33,6 @@
 	// .portfolio__list
 	&__list {
 		margin-right: -20px;
-
-		@include xl {
-		}
 	}
 
 	// .portfolio__item
@@ -82,29 +79,14 @@
 		}
 	}
 
-	// .portfolio__img
-	&__img {
-	}
-
 	// .portfolio__button
 	&__button {
 		align-self: flex-end;
 		display: inline-block;
 		font-family: "Roboto", sans-serif;
 		font-size: 14px;
+		min-width: 100px;
 		transition: all $doubleHoverTime ease;
-
-		&--open {
-			display: inline-block;
-			opacity: 1;
-			visibility: visible;
-		}
-
-		&--close {
-			display: inline-block;
-			opacity: 0;
-			visibility: hidden;
-		}
 	}
 }
 
