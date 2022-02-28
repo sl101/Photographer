@@ -1,0 +1,122 @@
+.about {
+	background-color: $mainColor;
+
+	// .about__wrapper
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .about__inner
+	&__inner {
+		padding: 70px 0 135px;
+
+		@include md {
+			padding: 45px 0 50px;
+		}
+	}
+
+	// .about__title
+	&__title {
+		color: $white;
+		text-align: left;
+		margin: 0 0 80px 0;
+
+		@include lg {
+			text-align: center;
+			margin: 0 0 50px 0;
+		}
+	}
+
+	// .about__content
+	&__content {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.content-about {
+	// .content-about__image
+	&__image {
+		flex: 0 0 413px;
+		max-width: 413px;
+		min-height: 492px;
+		object-fit: cover;
+		margin: 0 20px 0 0;
+	}
+
+	// .content-about__description
+	&__description {
+		max-width: 574px;
+		margin: 16px 0 0 0;
+		color: $white;
+	}
+
+	// .content-about__text
+	&__text {
+		margin: 0 0 85px 0;
+	}
+
+	// .content-about__paragraph
+	&__paragraph {
+		&--greeting {
+			display: block;
+		}
+
+		&--third {
+			display: block;
+			max-width: 490px;
+			margin: 19px 0 0 0;
+		}
+	}
+
+	// .content-about__advantages
+	&__advantages {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.advantage {
+	flex: 0 0 100%;
+	max-width: 500px;
+	// .advantage__item
+	&__item {
+		&:not(:last-child) {
+			margin: 0 20px 0 0;
+		}
+	}
+
+	// .advantage__value
+	&__value {
+		display: block;
+		font-size: 64px;
+	}
+
+	// .advantage__option
+	&__option {
+		display: block;
+		font-size: 20px;
+	}
+}
+
+.gallery-about {
+	flex: 0 0 277px;
+	transform: translateX(79px);
+	display: flex;
+	flex-direction: column;
+
+	// .gallery-about__item
+	&__item {
+		flex: 0 0 270px;
+		max-width: 277px;
+		width: 100%;
+		min-height: 270px;
+		object-fit: cover;
+	}
+
+	// .gallery-about__img
+	&__img {
+		height: 100%;
+	}
+}

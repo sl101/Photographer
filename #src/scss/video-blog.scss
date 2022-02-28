@@ -2,6 +2,11 @@
 	position: relative;
 	min-height: 48.611vw;
 	@include bg-cover;
+	margin: 0 0 120px 0;
+
+	@include lg {
+		margin: 0 0 100px 0;
+	}
 
 	@include sm {
 		min-height: 57.8vw;
