@@ -1,0 +1,104 @@
+.video-blog {
+	position: relative;
+	min-height: 48.611vw;
+	@include bg-cover;
+
+	@include sm {
+		min-height: 57.8vw;
+	}
+
+	// .video-blog__picture
+	&__picture {
+		width: 100%;
+	}
+
+	// .video-blog__play
+	&__play {
+		outline: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100px;
+		height: 100px;
+		border: 1px solid $white;
+		border-radius: 100%;
+		color: $white;
+		transition: all $hoverTime ease;
+
+		@include xl {
+			width: 90px;
+			height: 90px;
+		}
+
+		@include lg {
+			width: 80px;
+			height: 80px;
+		}
+
+		@include md {
+			width: 60px;
+			height: 60px;
+		}
+
+		@include sm {
+			width: 50px;
+			height: 50px;
+		}
+
+		@include lg-min {
+			&:focus {
+				background-color: $mainColor-20;
+				border-color: $mainColor-20;
+			}
+
+			&:active {
+				background-color: $white;
+			}
+
+			&:active .video-blog__icon {
+				stroke: $mainColor;
+				fill: $mainColor;
+			}
+
+			&:hover {
+				background-color: $mainColor;
+				border-color: $mainColor;
+			}
+
+			&:hover .video-blog__icon {
+				stroke: $white;
+				fill: $white;
+			}
+		}
+	}
+
+	// .video-blog__icon
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 53%;
+		transform: translate(-50%, -50%);
+		display: block;
+		width: 2.5vw;
+		height: 2.5vw;
+		stroke: $white;
+		fill: transparent;
+		transition: all $hoverTime ease;
+
+		@include lg {
+			width: 2.9vw;
+			height: 2.9vw;
+		}
+
+		@include md {
+			width: 3vw;
+			height: 3vw;
+		}
+
+		@include sm {
+			width: 5vw;
+			height: 5vw;
+		}
+	}
+}
