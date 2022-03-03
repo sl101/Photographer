@@ -1,18 +1,35 @@
 .about {
 	background-color: $mainColor;
 
+	// .about__container
+	&__container {
+		@include sm {
+			padding: 0;
+		}
+	}
+
 	// .about__wrapper
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+
+		@include xl {
+			flex-direction: column;
+			align-items: center;
+			padding: 0 0 50px 0;
+		}
 	}
 
 	// .about__inner
 	&__inner {
 		padding: 70px 0 135px;
 
-		@include md {
+		@include lg {
 			padding: 45px 0 50px;
+		}
+
+		@include sm {
+			padding: 45px 0 31px;
 		}
 	}
 
@@ -32,6 +49,11 @@
 	&__content {
 		display: flex;
 		justify-content: space-between;
+
+		@include lg {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 }
 
@@ -42,48 +64,100 @@
 		max-width: 413px;
 		min-height: 492px;
 		object-fit: cover;
-		margin: 0 20px 0 0;
+
+		@include lg {
+			margin: 0 0 50px 0;
+		}
+
+		@include sm {
+			flex: 0 0 320px;
+			max-width: 320px;
+			min-height: 389px;
+		}
 	}
 
 	// .content-about__description
 	&__description {
 		max-width: 574px;
-		margin: 16px 0 0 0;
+		padding: 16px 20px 0;
 		color: $white;
+
+		@include lg {
+			max-width: 500px;
+			padding: 0;
+			text-align: center;
+		}
 	}
 
 	// .content-about__text
 	&__text {
 		margin: 0 0 85px 0;
+
+		@include sm {
+			margin: 0 0 50px 0;
+			padding: 0 15px;
+		}
 	}
 
 	// .content-about__paragraph
 	&__paragraph {
+		@include sm {
+			text-align: center;
+		}
+
 		&--greeting {
 			display: block;
+		}
+
+		&--first {
+			margin-bottom: 20px;
+			@include sm {
+				display: block;
+				max-width: 320px;
+				margin: 0 auto 20px;
+			}
+		}
+
+		&--second {
+			margin: 0 0 20px 0;
+
+			@include sm {
+				display: block;
+				max-width: 370px;
+				margin: 0 auto 20px;
+			}
 		}
 
 		&--third {
 			display: block;
 			max-width: 490px;
-			margin: 19px 0 0 0;
+			margin: 20px 0 0 0;
 		}
-	}
-
-	// .content-about__advantages
-	&__advantages {
-		display: flex;
-		justify-content: space-between;
 	}
 }
 
 .advantage {
 	flex: 0 0 100%;
+	display: flex;
+	justify-content: space-between;
 	max-width: 500px;
+
+	@include sm {
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+
 	// .advantage__item
 	&__item {
 		&:not(:last-child) {
-			margin: 0 20px 0 0;
+			@include sm {
+				margin: 0 0 20px 0;
+			}
+		}
+
+		@include sm {
+			text-align: center;
+			padding: 0 15px;
 		}
 	}
 
@@ -91,28 +165,63 @@
 	&__value {
 		display: block;
 		font-size: 64px;
+		@include sm {
+			font-size: 48px;
+		}
 	}
 
 	// .advantage__option
 	&__option {
 		display: block;
 		font-size: 20px;
+
+		@include sm {
+			font-size: 18px;
+		}
 	}
 }
 
 .gallery-about {
 	flex: 0 0 277px;
-	transform: translateX(79px);
 	display: flex;
 	flex-direction: column;
 
+	@include xl {
+		flex: 1 1 100%;
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+
+	@include sm {
+		justify-content: space-between;
+	}
+
 	// .gallery-about__item
 	&__item {
-		flex: 0 0 270px;
+		flex: 0 1 270px;
 		max-width: 277px;
 		width: 100%;
 		min-height: 270px;
 		object-fit: cover;
+
+		@include lg {
+			flex: 0 0 240px;
+			max-width: 240px;
+			min-height: 240px;
+		}
+
+		@include md {
+			flex: 0 0 140px;
+			max-width: 140px;
+			min-height: 140px;
+		}
+
+		@include sm {
+			flex: 0 0 130px;
+			max-width: 130px;
+			min-height: 130px;
+		}
 	}
 
 	// .gallery-about__img
