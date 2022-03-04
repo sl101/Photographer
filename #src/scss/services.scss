@@ -1,0 +1,51 @@
+.services {
+	padding: 120px 0 60px;
+
+	@include sm {
+		padding: 100px 0 50px;
+	}
+
+	// .services__title
+	&__title {
+		margin: 0 0 70px 0;
+
+		@include sm {
+			margin: 0 0 50px 0;
+		}
+	}
+
+	// .services__content
+
+	&__content {
+		margin: 0 0 60px 0;
+	}
+
+	// .services__slider
+
+	&__slider {
+	}
+
+	// .services__bottom
+
+	&__bottom {
+		font-size: 16px;
+		color: $mainColor-50;
+
+		@include sm {
+			text-align: center;
+			font-size: 14px;
+		}
+	}
+}
+
+.slider-services {
+	// .slider-services__wrapper
+
+	&__wrapper {
+	}
+
+	// .slider-services__slide
+
+	&__slide {
+	}
+}
