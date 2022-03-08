@@ -1,5 +1,5 @@
 .portfolio {
-	padding: 120px 0 90px;
+	padding: 120px 0 85px;
 
 	@include lg {
 		padding: 100px 0 80px;
@@ -83,6 +83,7 @@
 	&__button {
 		align-self: flex-end;
 		display: inline-block;
+		margin: -10px 0 0 0;
 		font-family: "Roboto", sans-serif;
 		font-size: 14px;
 		min-width: 100px;

@@ -51,3 +51,39 @@ const swiperHero = new Swiper('.swiper-hero',{
 		speed: 1200,
 		loop: true,
 		});
+
+// ====================================================
+
+	const swiperService = new Swiper('.slider-services',{
+
+		wrapperClass: 'slider-services__wrapper',
+		slideClass: 'slider-services__slide',
+	
+		speed: 1200, 
+		slidesPerView: 1.4, 
+		centeredSlides: false,
+		initialSlide: 1,
+		slideToClickedSlide: true,
+    // roundLengths: true,
+    // loop: true,
+    // loopAdditionalSlides: 1,
+		
+		breakpoints: {
+			480: {
+				slidesPerView: 3, 
+				spaceBetween: -80,
+				centeredSlides: true
+			},
+			768: { 
+	
+			},
+			992: {
+				spaceBetween: 1
+			},
+			1200: { 
+				spaceBetween: 19,
+			},
+		},
+	});
+		
+		
