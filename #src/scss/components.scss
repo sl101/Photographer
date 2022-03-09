@@ -24,10 +24,10 @@
 	font-size: 24px;
 
 	@include xl {
-		text-align: center;
 	}
 
 	@include lg {
+		text-align: center;
 	}
 
 	@include md {

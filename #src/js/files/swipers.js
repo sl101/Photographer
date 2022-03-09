@@ -61,7 +61,7 @@ const swiperHero = new Swiper('.swiper-hero',{
 	
 		speed: 1200, 
 		slidesPerView: 1.4, 
-		centeredSlides: false,
+		centeredSlides: true,
 		initialSlide: 1,
 		slideToClickedSlide: true,
     // roundLengths: true,
@@ -72,10 +72,9 @@ const swiperHero = new Swiper('.swiper-hero',{
 			480: {
 				slidesPerView: 3, 
 				spaceBetween: -80,
-				centeredSlides: true
 			},
 			768: { 
-	
+				
 			},
 			992: {
 				spaceBetween: 1
