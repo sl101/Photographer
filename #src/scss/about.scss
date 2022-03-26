@@ -3,6 +3,12 @@
 
 	// .about__container
 	&__container {
+		max-width: 1440px;
+		padding: 0 0 0 80px;
+		@include xl {
+			max-width: $maxWidthContainer;
+			padding: 0 15px;
+		}
 		@include sm {
 			padding: 0;
 		}

@@ -16,6 +16,7 @@
 
 	// .portfolio__wrapper
 	&__wrapper {
+		max-width: 1280px;
 		display: flex;
 		flex-direction: column;
 	}
@@ -23,6 +24,7 @@
 	// .portfolio__content
 	&__content {
 		display: block;
+		width: 100%;
 		@include lg {
 		}
 
@@ -32,7 +34,15 @@
 
 	// .portfolio__list
 	&__list {
-		margin-right: -20px;
+		margin: 0 -20px 0 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
+		@include sm {
+			margin: 0 -10px 0 0;
+		}
 	}
 
 	// .portfolio__item
@@ -42,6 +52,16 @@
 		height: 340px;
 		overflow: hidden;
 		margin: 0 20px 20px 0;
+
+		&:nth-child(3n + 2) {
+			transform: translateY(30px);
+		}
+
+		@include xl {
+			&:nth-child(3n + 2) {
+				transform: translateY(0);
+			}
+		}
 
 		@include lg-min {
 			&:hover .hover-unit {
@@ -54,14 +74,11 @@
 				display: none;
 			}
 		}
-	}
 
-	.portfolio__item--shift {
-		position: absolute;
-		margin-top: 30px;
-
-		@include xl {
-			margin-top: 0;
+		@include sm {
+			width: 175px;
+			height: 140px;
+			margin: 0 10px 10px 0;
 		}
 	}
 
@@ -73,6 +90,16 @@
 		outline: none;
 
 		@include lg-min {
+			&:focus + .hover-unit {
+				transform: translateY(0);
+			}
+		}
+
+		@include lg {
+			&:active + .hover-unit {
+				transform: translateY(0);
+			}
+
 			&:focus + .hover-unit {
 				transform: translateY(0);
 			}
@@ -121,16 +148,32 @@
 
 	// .hover-unit__button
 	&__button {
+		position: relative;
+		z-index: 2;
 		display: block;
-		cursor: pointer;
+		padding: 12px 48px;
 		font-family: "Roboto";
 		border: 1px solid $white;
 		border-radius: 10px;
-		padding: 12px 48px;
+		color: $white;
+		outline: none;
+		cursor: pointer;
 		transition: all $doubleHoverTime ease;
 
 		@include lg-min {
 			&:hover {
+				color: $white;
+				border-color: $mainColor;
+				background-color: $mainColor;
+			}
+
+			&:active {
+				transform: translate(2px, 2px);
+			}
+		}
+
+		@include lg {
+			&:active {
 				color: $white;
 				border-color: $mainColor;
 				background-color: $mainColor;
