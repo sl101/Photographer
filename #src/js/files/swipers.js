@@ -60,26 +60,27 @@ const swiperHero = new Swiper('.swiper-hero',{
 		slideClass: 'slider-services__slide',
 	
 		speed: 1200, 
-		slidesPerView: 1.4, 
+		// slidesPerView: 1.4, 
+		slidesPerView: 3, 
 		centeredSlides: true,
 		initialSlide: 1,
 		slideToClickedSlide: true,
     // roundLengths: true,
-    // loop: true,
+    loop: true,
     // loopAdditionalSlides: 1,
 		
 		breakpoints: {
 			480: {
-				slidesPerView: 3, 
+				// slidesPerView: 3, 
 				spaceBetween: -80,
 			},
 			768: { 
-				
+				// loop: false,
 			},
 			992: {
-				spaceBetween: 1
+				// spaceBetween: 1,
 			},
-			1200: { 
+			1326: { 
 				spaceBetween: 19,
 			},
 		},
