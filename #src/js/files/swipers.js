@@ -68,6 +68,7 @@ const swiperHero = new Swiper('.swiper-hero',{
     // roundLengths: true,
     loop: true,
     // loopAdditionalSlides: 1,
+
 		
 		breakpoints: {
 			480: {
